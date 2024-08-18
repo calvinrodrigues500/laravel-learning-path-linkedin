@@ -10,7 +10,7 @@
 			<a href="{{route('notes.create')}}" class="rounded-md text-white font-bold">+ New Note</a>
            @foreach ($notes as $note)
 				<div class="bg-gray-50 text-gray-800 px-6 rounded-md">
-					<h2 class="font-bold">{{$note->title}}</h2>
+					<a href="{{route('notes.show', $note)}}"><h2 class="font-bold">{{$note->title}}</h2></a>
 					<p>{{$note->text}}</p>
 					<span>{{$note->updated_at ? $note->created_at->diffForHumans() : $note->updated_at}}</span>
 				</div>
